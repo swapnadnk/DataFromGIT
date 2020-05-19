@@ -1,0 +1,22 @@
+<div fxLayout="column" class="home_panel">
+  <div fxLayout="row" id="title">
+    <p>GitFetch - Profile Finder<br>for GitHub</p>
+  </div>
+  <div fxLayout="row" id="message">
+    <p>Check out the repos, followers and more, <br> just by entering a username!</p>
+  </div>
+  <div fxLayout="row" id="form">
+    <form [formGroup]="searchForm" (ngSubmit)="onSubmit();">
+      <input type="text"
+      formControlName="username"
+      placeholder="Enter a username"/>
+      <button type="submit">SEARCH</button>
+    </form>
+  </div>
+  <div fxLayout="row" id="results">
+    <p><span class="result">Name:</span> {{name}}</p>
+    <p><span class="result">Repos:</span> {{repos}}</p>
+    <p><span class="result">Username:</span> {{user}}</p>
+    <p><span class="result">URL:</span> {{url}}</p>
+  </div>
+</div>
